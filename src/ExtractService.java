@@ -34,6 +34,7 @@ public class ExtractService {
             int requestType = rule.getRequestMoethod();
 
             Connection conn = Jsoup.connect(url);
+            conn.ignoreContentType(true);
             // 设置查询参数
 
             if (params != null)
